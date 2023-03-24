@@ -29,7 +29,9 @@
           <!-- menu -->
           <ul class="site-nav list">
             <li class="menu-title">
-              <a class="site-page link" href="./index.html">Studio</a>
+              <a class="site-page link current-page" href="./index.html"
+                >Studio</a
+              >
             </li>
             <li class="menu-title">
               <a class="site-page link" href="./portfolio.html">Portfolio</a>
@@ -62,7 +64,7 @@
       <section class="section order">
         <div class="container">
           <h1 class="order-title">Effective Solutions for Your Business</h1>
-          <button class="button-order" type="button">Order Service</button>
+          <button class="button-order" data-modal-open type="button">Order Service</button>
         </div>
       </section>
 
@@ -439,5 +441,15 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden"data-modal>
+      <div class="modal">
+        <button class="modal-close-button" data-modal-close type="button">
+          <svg class="modal-close-icon" width="8px" height="8px" >
+            <use href="./images/icons.svg#icon-close-black"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+     <script src="./js/modal.js"></script>
   </body>
 </html>
