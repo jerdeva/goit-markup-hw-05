@@ -104,9 +104,7 @@ img{
     text-decoration: none;
     padding-top: 24px;
     padding-bottom: 24px;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .link:hover,
@@ -123,6 +121,10 @@ img{
     left: 0; 
     bottom: 0;
     
+}
+
+.current-page{
+    color: #404BBF;
 }
 
 .menu-title{
@@ -149,9 +151,7 @@ img{
     text-decoration: none;
     padding-bottom: 24px;
     padding-top: 24px;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-nav .contacts-link:hover,
 .contacts-nav .contacts-link:focus{
@@ -206,12 +206,10 @@ img{
     display: inline-block;
     margin: 48px auto 0;
     border: none;
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 .button-order:hover, .button-order:focus{
-    background: #404BBF;
+    background-color: #404BBF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 4px;;
 }
@@ -372,9 +370,8 @@ img{
 }
 
 .team-soc-link.link{
-    transition-property: background-color, box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .team-soc-link.link:hover,.team-soc-link.link:focus {
@@ -415,13 +412,14 @@ img{
     border: 1px solid #8E8F99;
     border-radius: 4px;
     height: 88px;
-    transition-property: border-color, fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .customers-soc-link {
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
    .customer-soc-icon{
     fill: #8E8F99;
+    transition:  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
    }
                
    .customers-soc-link:hover
@@ -497,9 +495,7 @@ img{
     display: flex;
     align-items: center;
     justify-content: center;
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-item-last{
@@ -536,9 +532,7 @@ img{
     text-align: center;
     border: 1px solid #E7E9FC;
     border-radius: 4px;
-    transition-property: color, background-color, box-shadow, border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .buttons-item:active, .buttons-item:hover, .buttons-item:focus{
     background-color: #404BBF;
@@ -576,9 +570,8 @@ img{
 }
 .potfolio-link{
     position: relative;
-    transition-property: box-shadow;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .potfolio-link:hover,
@@ -608,27 +601,26 @@ img{
     position: absolute;
     color: var(--light-mode-backgrounds-color);
     background-color: #4D5AE5;
-    font-family: "Roboto" , sans-serif;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     top: 0px;
-    padding: 40px 32px 164px 32px;
-   height: 100%;
+    left: 0px;
+    padding: 40px 32px 0 32px;
+    height: 100%;
+    width: 100%;
    transform: translateY(100%);
-   transition: transform 250ms linear ;
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
 }
 
 
 .portfolio-name{
-    width: 360px;
-    border: solid #E7E9FC;
-    border-top: none;
     padding-bottom: 32px;
     padding-top: 32px;
     padding-left: 16px;
-    border: 1px solid #E7E9FC
+    border: 1px solid #E7E9FC;
+        border-top: none;
 }
 
 .project-name{
@@ -662,6 +654,7 @@ img{
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.4);
+    opacity: 1;
     transition: opacity 300ms linear , visibility 300ms linear;
 }
 
@@ -676,7 +669,6 @@ img{
     background-color: #FCFCFC;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;   
-    padding: 24px;
 }
 
 .backdrop.is-hidden .modal{
@@ -687,24 +679,29 @@ img{
    top: 24px;
    right: 24px;
    background-color: #E7E9FC;
-   margin-left: auto;
    border-color: var(--accent-color);
     border-radius: 50%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     width: 24px;
     height: 24px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-close-icon{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-button:hover{
     border-color: transparent;
+    background-color: #404BBF;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+}
+
+.modal-close-button:hover .modal-close-icon{
+    fill: var(--white-color);
 }
 
 .is-hidden{
